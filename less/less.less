@@ -11,16 +11,12 @@
   src: url("../fonts/RockwellStd-Light.otf");
 }
 
-.container {
-  display: block;
-  max-width: 1500px;
-  margin:0 auto;
-}
 .resize {
-  max-width: 1110px;
+  max-width: 1090px;
   margin: 0 auto;
 }
 .header {
+  max-width:100%;
   background-color: #43ba7b;
 }
 .header .capture {
@@ -93,14 +89,15 @@
 
 .photo-block {
   display: inline-block;
-  width: 1500px;
+  width: 100%;
   height: 560px;
   background: url("../img/big-photo.png") center no-repeat;
+  background-size: cover;
 }
 .app-download-block {
-  display: inline-block;
+  display: block;
   padding-top: 175px;
-  padding-left:280px;
+  padding-left:140px;
 }
 .app-download-block .title  {
   margin-top: 0;
@@ -156,8 +153,10 @@
 .links-block {
   background-color: #f3f3f3;
 }
-.links-block ul{
-  padding-left: 250px;
+.links-block ul {
+  display: flex;
+  justify-content: space-between;
+
 }
 .links-block ul li{
   display: inline-block;
@@ -169,7 +168,6 @@
   padding-top: 30px;
   padding-left: 25px;
   padding-right: 25px;
-  margin-right: 80px;
   color: transparent;
   text-indent:-9999px;
   overflow: hidden;
@@ -199,17 +197,21 @@
 }
 
 .phone-block {
-  display: inline-block;
+  margin-bottom: 60px;
   vertical-align: top;
   padding-top: 60px;
-  margin-left: 280px;
 }
 .phone-block .about {
   vertical-align: top;
-  margin-left: 150px;
+  margin-left: 145px;
   display: inline-block;
   max-width: 600px;
 }
+
+.phone-block .about p {
+  display: inline-block;
+}
+
 .phone-block .title {
   margin-top: 0;
   color: #525151;
@@ -322,8 +324,6 @@
 }
 
 .features-block {
-  padding-left: 190px;
-  padding-right: 190px;
   padding-top: 85px;
   padding-bottom: 15px;
   background-color: #41c17d;
@@ -428,6 +428,9 @@
   padding-bottom: 85px;
   text-align: center;
 }
+.comment-block blockquote {
+  margin: 0;
+}
 .comment-block .text {
   display: block;
   max-width: 950px;
@@ -455,15 +458,19 @@
   font-family:OpenSans;
 }
 
-.email-block {
+.form-block {
   text-align: center;
   padding-top: 90px;
   padding-bottom: 90px;
   background-color: #41c17d;
 }
-.email-block form label {
+.form-block p {
+  text-align: center;
+}
+
+.form-block form label {
   position: relative;
-  display: block;
+  display: inline-block;
   margin-bottom: 40px;
   text-align: center;
   color: white;
@@ -472,64 +479,73 @@
   line-height: 26px;
   letter-spacing:0.01rem;
 }
-.email-block form label::before {
+.form-block form label::before {
   content: "";
   position: absolute;
   width: 20px;
   height: 15px;
-  top: 87px;
-  left: 890px;
+  top: 85px;
+  left: 95%;
   background: url("../img/green-email.png");
 }
-.email-block form input {
+.form-block form input {
+  display: block;
+  margin:0 auto;
   width: 348px;
   height: 50px;
   padding-left: 20px;
+  outline: none;
+  border: none;
   color: #41c17d;
   font-family:OpenSans;
   font-size: 14px;
   line-height: 26px;
   letter-spacing:0.01rem;
+
+}
+.form-block form input::placeholder {
+  color: #41c17d;
 }
 
 
-.footer .systems {
+footer .systems {
   display: flex;
   justify-content: center;
   padding-left:0;
   padding-top: 70px;
   padding-bottom: 40px;
 }
-.footer .systems li {
+footer .systems li {
   display: inline-block;
   list-style-type: none;
   margin-right: 60px;
 }
-.footer .systems li:last-child {
+footer .systems li:last-child {
   margin-right: 0;
 }
-.footer .systems a {
+footer .systems a {
   display: inline-block;
   color: transparent;
   text-indent:-9999px;
   overflow: hidden;
 }
-.footer .systems .andriod {
+footer .systems .andriod {
   width: 33px;
   height: 38px;
   background: url("../img/big-andriod.png")center no-repeat;
 }
-.footer .systems .ios {
+footer .systems .ios {
   width: 28px;
   height: 38px;
   background: url("../img/big-apple.png")center no-repeat;
 }
-.footer .systems .windows {
+footer .systems .windows {
   width: 33px;
   height: 38px;
   background: url("../img/big-windows.png")center no-repeat;
 }
-.footer .copyright {
+footer .copyright {
+  margin-top: 0;
   text-align: center;
   color: #767272;
   font-family:OpenSans;
@@ -537,7 +553,7 @@
   letter-spacing:0.066rem;
   margin-bottom: 70px;
 }
-.footer .copyright span {
+footer .copyright span {
   color: #565555;
   font-family:OpenSans-Semibold;
 }

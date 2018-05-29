@@ -8,15 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<div class="container">
   <section class="header ">
     <div class="resize">
       <div class="capture">Capture</div>
-      <ul class="list">
+      <menu class="list">
         <li><a href="#">About</a></li>
         <li><a href="#">Features</a></li>
         <li><a href="#">Testimonials</a></li>
-      </ul>
+      </menu>
       <ul class="media">
         <li><a href="#">Facebook</a></li>
         <li><a href="#">Twitter</a></li>
@@ -25,7 +24,7 @@
     </div>
   </section>
   <section class="photo-block">
-    <div class="app-download-block">
+    <div class="app-download-block resize">
       <h2 class="title">Take Photos Like A Pro.</h2>
       <p class="text">With only your iphone and capture app you can take stunning image <br>
         like a professional Photographer.</p>
@@ -34,14 +33,14 @@
     </div>
   </section>
   <section class="links-block">
-    <ul>
+    <ul class="resize">
       <li><a href="#" class="google">google</a></li>
       <li><a href="#" class="facebook">facebook</a></li>
       <li><a href="#" class="yahoo">yahoo!</a></li>
       <li><a href="#" class="paypal">paypal</a></li>
     </ul>
   </section>
-  <section class="phone-block">
+  <section class="phone-block resize">
     <img src="img/big-iphone.png">
     <div class="about"><h2 class="title">Capture unforgettable moments.</h2>
       <p class="text">Seuismod ligula ipsum vulputate tellus quisque dictum tortor at purus faucibus tincidunt, pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
@@ -52,12 +51,12 @@
         <li>Quisque pretium malesuada ornare. </li>
         <li>Cras interdum vestibulum dolor.</li>
       </ul>
-      <a href="#" class="watch-video">Watch video</a>
-      <a href="#" class="get-the-app">get the app</a>
+      <p><a href="#" class="watch-video">Watch video</a></p>
+      <p><a href="#" class="get-the-app">get the app</a></p>
     </div>
   </section>
-  <section class="features-block">
-    <ul>
+  <section class="features-block ">
+    <ul class="resize">
       <li>
         <h3 class="title">malesuada fames turpis.</h3>
         <p class="text">vel ultrices mauris libero id diam. Vivamus tellus sagittis facilisis nisi quis mollis risus quisque ultrices elit.</p>
@@ -85,26 +84,28 @@
     </ul>
   </section>
   <section class="comment-block">
+    <blockquote>
     <p class="text">Integer pharetra tellus varius, dictum erat vel, maximus tellus. Sed vitae auctor ipsum. Aliquam luctus erat nec pulvinar vehicula donec congue tortor eget sem condimentum, ut tempor massa porttitor. Praesent tincidunt mi orci  in sollicitudin mi dapibus dapibus pellentesque habitant morbi tristique senectus et malesuada fames turpis egestas.</p>
     <div class="name">John Doe</div>
     <div class="description">app developer</div>
+    </blockquote>
   </section>
-  <section class="email-block">
+  <section class="form-block">
   <form>
-    <label for="email">Join Our Liste and stay updated!</label>
-    <input type="text" id="email" value="Enter your email">
+    <p>
+      <label for="email">Join Our Liste and stay updated!</label>
+      <input type="text" id="email" placeholder="Enter your email">
+    </p>
   </form>
 </section>
-  <section class="footer">
+  <footer>
     <ul class="systems">
       <li><a href="#" class="andriod">Andriod</a></li>
       <li><a href="#" class="ios">Ios</a></li>
       <li><a href="#" class="windows">Windows</a></li>
     </ul>
-    <div class="copyright">&#169;  2015 <span>Pixelhint.com.</span> All Rights Reserved</div>
-  </section>
-
-</div>
+    <p class="copyright">&#169;  2015 <span>Pixelhint.com.</span> All Rights Reserved</p>
+  </footer>
 <script src="//localhost:35729/livereload.js"></script>
 </body>
 </html>
