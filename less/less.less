@@ -19,10 +19,16 @@
   max-width:100%;
   background-color: #43ba7b;
 }
+.header .resize {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
 .header .capture {
+  flex-grow: 0.5;
   position: relative;
   display: inline-block;
-  margin-right: 50px;
+  margin-left: 30px;
   padding-left:40px;
   padding-top: 30px;
   color: white;
@@ -40,24 +46,31 @@
   background: url("../img/Camera.png");
 }
  .header .list {
+   flex-grow: 4;
    display: inline-block;
-   margin-right: 350px;
+   margin-left:40px;
+   padding-left:0;
    font-family:OpenSans;
    font-size: 16px;
  }
  .header .list li {
    display: inline-block;
    margin-right: 25px;
-   .header .list li:last-child {
-     margin-right: 0;
-   }
  }
- .header .list li a {
+
+.header .list li:last-child {
+  margin-right: 0;
+}
+
+.header .list li a {
    color: white;
    text-decoration: none;
 
  }
  .header .media {
+   margin-right: 30px;
+   padding-left: 0;
+   flex-grow: 0.2;
    display: inline-block;
    font-size: 0;
  }
@@ -435,6 +448,8 @@
   display: block;
   max-width: 950px;
   margin: 0 auto 40px auto;
+  padding-left: 20px;
+  padding-right: 20px;
   color: #767272;
   font-family:OpenSans;
   font-size: 18px;
@@ -466,8 +481,8 @@
 }
 .form-block p {
   text-align: center;
-}
 
+}
 .form-block form label {
   position: relative;
   display: inline-block;
@@ -556,4 +571,150 @@ footer .copyright {
 footer .copyright span {
   color: #565555;
   font-family:OpenSans-Semibold;
+}
+
+@media (max-width: 1100px) {
+  .phone-block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .phone-block img {
+    align-self: center;
+    margin-left: -50px;
+  }
+  .phone-block .about {
+    margin-left: 0;
+    align-self: center;
+    text-align: center;
+  }
+  .phone-block .about .title {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .phone-block .about .text {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .phone-block .about .features li::before {
+    left: -15px;
+  }
+
+  .features-block .resize {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .features-block .resize li {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .links-block .resize li {
+    width:50%;
+    text-align: center;
+  }
+  .links-block .resize {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 700px) {
+  .header .resize {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header .resize .capture {
+    flex-grow: 1;
+    margin-left: 0;
+    margin-bottom: 50px;
+  }
+  .header .resize .list {
+    flex-grow: 1;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+  .header .resize .media {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .photo-block .app-download-block {
+    padding-left: 7%;
+  }
+
+  .phone-block .text {
+    box-sizing: border-box;
+  }
+
+  .features-block .resize li {
+    max-width: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .features-block .resize li .title {
+    align-self: center;
+    padding-left: 0;
+  }
+  .features-block ul li:nth-of-type(1) .title::before, .features-block ul li:nth-of-type(2) .title::before, .features-block ul li:nth-of-type(3) .title::before,
+  .features-block ul li:nth-of-type(4) .title::before, .features-block ul li:nth-of-type(5) .title::before, .features-block ul li:nth-of-type(6) .title::before{
+    left: 120px;
+  }
+  .features-block .resize li .text {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+;
+}
+
+@media (max-width: 500px) {
+  .photo-block .app-download-block {
+    display: flex;
+    flex-direction: column;
+  }
+  .photo-block .app-download-block .title {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+  }
+  .photo-block .app-download-block .text {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .photo-block .app-download-block .button-iphone   {
+    margin-bottom: 30px;
+    text-align: center;
+    align-self: center;
+    margin-right: 0;
+  }
+  .photo-block .app-download-block .button-android {
+    align-self: center;
+  }
+
+  .links-block .resize li {
+    width: 100%;
+  }
+
+  .phone-block .about p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .form-block form input {
+    width: 280px;
+  }
+  .form-block form label::before {
+    left:85%;
+  }
+
 }
